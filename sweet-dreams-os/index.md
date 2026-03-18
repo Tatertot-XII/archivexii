@@ -15,13 +15,13 @@
     overflow: hidden;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* <-- THIS lets us push the phone down */
+    align-items: flex-start;
     font-family: 'Inter', sans-serif;
   }
 
-  /* Move the whole phone down */
+  /* Move whole phone down slightly */
   .phone-wrapper {
-    margin-top: 120px; /* <-- MOVE ENTIRE DEVICE DOWN */
+    margin-top: 60px;
     transform: scale(var(--scale));
     transform-origin: top center;
     height: 2408px;
@@ -39,28 +39,32 @@
     box-shadow: 0 0 40px rgba(0,0,0,0.4);
   }
 
-  /* Text scales AND moves correctly */
+  /* CENTERED CLOCK */
   .clock {
     position: absolute;
-    top: calc(360px * var(--scale)); /* moved down */
-    left: calc(60px * var(--scale));
+    top: calc(900px * var(--scale));
+    left: 50%;
+    transform: translateX(-50%);
     font-size: calc(180px * var(--scale));
     font-weight: 100;
     color: white;
   }
 
+  /* DATE UNDER CLOCK */
   .date {
     position: absolute;
-    top: calc(620px * var(--scale)); /* moved down */
-    left: calc(65px * var(--scale));
+    top: calc(1100px * var(--scale));
+    left: 50%;
+    transform: translateX(-50%);
     font-size: calc(42px * var(--scale));
     font-weight: 300;
     color: white;
   }
 
+  /* SWIPE TEXT MOVED UP */
   .swipe {
     position: absolute;
-    bottom: calc(180px * var(--scale));
+    top: calc(1500px * var(--scale));
     left: 50%;
     transform: translateX(-50%);
     font-size: calc(36px * var(--scale));
