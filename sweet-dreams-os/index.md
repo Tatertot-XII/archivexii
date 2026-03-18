@@ -19,6 +19,7 @@
     font-family: 'Inter', sans-serif;
   }
 
+  /* Phone wrapper stays the same */
   .phone-wrapper {
     margin-top: 60px;
     transform: scale(var(--scale));
@@ -38,21 +39,21 @@
     box-shadow: 0 0 40px rgba(0,0,0,0.4);
   }
 
-  /* CLOCK CENTERED USING PERCENTAGES */
+  /* CLOCK — moved lower */
   .clock {
     position: absolute;
-    top: 38%;      /* <--- THIS IS THE REAL FIX */
+    top: 48%;   /* TRUE CENTER */
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     font-size: calc(180px * var(--scale));
     font-weight: 100;
     color: white;
   }
 
-  /* DATE UNDER CLOCK */
+  /* DATE — directly under clock */
   .date {
     position: absolute;
-    top: 46%;      /* <--- PERFECTLY UNDER CLOCK */
+    top: 56%;
     left: 50%;
     transform: translateX(-50%);
     font-size: calc(42px * var(--scale));
@@ -60,10 +61,10 @@
     color: white;
   }
 
-  /* SWIPE TEXT MOVED UP */
+  /* SWIPE TEXT — moved down into lower-middle */
   .swipe {
     position: absolute;
-    top: 63%;      /* <--- NO MORE BOTTOM CUT-OFF */
+    top: 75%;
     left: 50%;
     transform: translateX(-50%);
     font-size: calc(36px * var(--scale));
@@ -88,7 +89,7 @@
 <div class="phone-wrapper">
   <div class="a23-frame">
     <div class="clock">12:45</div>
-    <div class="date">Tue, March 18</div>
+    <div class="date">Tue, March 19</div>
     <div class="swipe">Swipe up to unlock</div>
   </div>
 </div>
