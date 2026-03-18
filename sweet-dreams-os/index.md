@@ -19,11 +19,11 @@
     font-family: 'Inter', sans-serif;
   }
 
-  /* THIS IS THE FIX */
+  /* PHONE WRAPPER — NOW ACTUALLY MOVES */
   .phone-wrapper {
-    margin-top: 200px; /* lower the whole phone */
+    margin-top: 200px; /* adjust this to taste */
     transform: scale(var(--scale));
-    transform-origin: center center; /* <--- THE REAL FIX */
+    transform-origin: center top; /* allows margin to work */
     height: 2408px;
     width: 1080px;
   }
@@ -39,6 +39,7 @@
     box-shadow: 0 0 40px rgba(0,0,0,0.4);
   }
 
+  /* CLOCK — TRUE CENTER */
   .clock {
     position: absolute;
     top: 48%;
@@ -49,6 +50,7 @@
     color: white;
   }
 
+  /* DATE — under clock */
   .date {
     position: absolute;
     top: 56%;
@@ -59,6 +61,7 @@
     color: white;
   }
 
+  /* SWIPE — lower-middle */
   .swipe {
     position: absolute;
     top: 75%;
@@ -75,7 +78,10 @@
   function scalePhone() {
     const phoneHeight = 2408;
     const screenHeight = window.innerHeight;
-    const scale = screenHeight / phoneHeight;
+
+    /* THE REAL FIX — scale to 90% of screen height */
+    const scale = (screenHeight * 0.9) / phoneHeight;
+
     document.documentElement.style.setProperty('--scale', scale);
   }
 
