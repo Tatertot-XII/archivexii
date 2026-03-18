@@ -19,7 +19,7 @@
     background-size: cover;
     border-radius: 40px;
     overflow: hidden;
-    position: relative;
+    position: relative; /* THIS LINE IS THE FIX */
     box-shadow: 0 0 40px rgba(0,0,0,0.4);
   }
 
