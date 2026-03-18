@@ -19,15 +19,11 @@
     font-family: 'Inter', sans-serif;
   }
 
-  /* This wrapper scales the phone */
   .phone-wrapper {
     transform: scale(var(--scale));
     transform-origin: center center;
     height: 2408px;
     width: 1080px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   .a23-frame {
@@ -41,31 +37,30 @@
     box-shadow: 0 0 40px rgba(0,0,0,0.4);
   }
 
-  /* TEXT DOES NOT SCALE TWICE ANYMORE */
   .clock {
     position: absolute;
-    top: 260px;
-    left: 60px;
-    font-size: 180px;
+    top: calc(260px * var(--scale));
+    left: calc(60px * var(--scale));
+    font-size: calc(180px * var(--scale));
     font-weight: 100;
     color: white;
   }
 
   .date {
     position: absolute;
-    top: 500px;
-    left: 65px;
-    font-size: 42px;
+    top: calc(500px * var(--scale));
+    left: calc(65px * var(--scale));
+    font-size: calc(42px * var(--scale));
     font-weight: 300;
     color: white;
   }
 
   .swipe {
     position: absolute;
-    bottom: 180px;
+    bottom: calc(180px * var(--scale));
     left: 50%;
     transform: translateX(-50%);
-    font-size: 36px;
+    font-size: calc(36px * var(--scale));
     font-weight: 400;
     color: white;
     opacity: 0.8;
@@ -77,7 +72,6 @@
     const phoneHeight = 2408;
     const screenHeight = window.innerHeight;
     const scale = screenHeight / phoneHeight;
-
     document.documentElement.style.setProperty('--scale', scale);
   }
 
