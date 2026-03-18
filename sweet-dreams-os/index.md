@@ -19,9 +19,9 @@
     font-family: 'Inter', sans-serif;
   }
 
-  /* Phone wrapper stays the same */
+  /* LOWER THE WHOLE PHONE */
   .phone-wrapper {
-    margin-top: 60px;
+    margin-top: 220px; /* was 60px → then 140px → now LOWERED properly */
     transform: scale(var(--scale));
     transform-origin: top center;
     height: 2408px;
@@ -39,10 +39,10 @@
     box-shadow: 0 0 40px rgba(0,0,0,0.4);
   }
 
-  /* CLOCK — moved lower */
+  /* CLOCK — TRUE CENTER */
   .clock {
     position: absolute;
-    top: 48%;   /* TRUE CENTER */
+    top: 48%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: calc(180px * var(--scale));
@@ -50,7 +50,7 @@
     color: white;
   }
 
-  /* DATE — directly under clock */
+  /* DATE — under clock */
   .date {
     position: absolute;
     top: 56%;
@@ -61,7 +61,7 @@
     color: white;
   }
 
-  /* SWIPE TEXT — moved down into lower-middle */
+  /* SWIPE — lower-middle */
   .swipe {
     position: absolute;
     top: 75%;
