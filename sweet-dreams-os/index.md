@@ -2,12 +2,6 @@
 
 <style>
   body {
-    font-family: 'Inter', sans-serif;
-  }
-</style>
-
-<style>
-  body {
     margin: 0;
     padding: 0;
     background: #000;
@@ -15,14 +9,15 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    font-family: 'Inter', sans-serif;
   }
 
   .a23-frame {
     width: 1080px;
     height: 2408px;
-    background: url('./andrbackdropviacopilot,jpeg') no-repeat center center;
+    background: url('./andrbackdropviacopilot.jpeg') no-repeat center center;
     background-size: cover;
-    border-radius: 40px; /* optional: makes it look like a phone */
+    border-radius: 40px;
     overflow: hidden;
     box-shadow: 0 0 40px rgba(0,0,0,0.4);
   }
