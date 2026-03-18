@@ -18,12 +18,12 @@
     font-family: 'Inter', sans-serif;
   }
 
-  /* HIDE GITHUB BLUE LINK */
+  /* HIDE GITHUB BLUE LINK (theme header) */
   .page-header {
     display: none;
   }
 
-  /* TOP-LEFT TITLE */
+  /* TOP-LEFT CLICKABLE TITLE */
   .header-title {
     position: absolute;
     top: 20px;
@@ -31,7 +31,12 @@
     color: white;
     font-size: 22px;
     font-weight: 600;
+    text-decoration: none; /* remove underline */
     z-index: 9999;
+  }
+
+  .header-title:hover {
+    opacity: 0.7; /* subtle hover effect */
   }
 
   /* HIDE DOCTYPE TEXT */
@@ -89,7 +94,9 @@
 </head>
 <body>
 
-<div class="header-title">archivexii</div>
+<!-- CLICKABLE HEADER -->
+<a class="header-title" href="/archivexii/">archivexii</a>
+
 <p class="hide-doctype"><!DOCTYPE html></p>
 
 <div class="phone">
