@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sweet Dreams OS</title>
+
 <style>
   body {
     margin: 0;
@@ -6,7 +13,7 @@
     width: 100vw;
 
     /* PERFECTLY CENTERED WALLPAPER */
-    background-image: url('sweet-dreams-os/andrbackdropviacopilot.jpeg');
+    background-image: url('andrbackdropviacopilot.jpeg'); /* adjust path if needed */
     background-size: cover;
     background-position: center center;
 
@@ -48,6 +55,9 @@
   }
 </style>
 
+</head>
+<body>
+
 <!-- CLOCK + DATE -->
 <div class="clock-container">
   <div class="clock">12:45</div>
@@ -56,3 +66,6 @@
 
 <!-- SWIPE TEXT -->
 <div class="swipe">Swipe up to unlock</div>
+
+</body>
+</html>
