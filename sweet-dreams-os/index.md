@@ -22,7 +22,7 @@
 
   /* PHONE WRAPPER — NOW ACTUALLY MOVES */
   .phone-wrapper {
-    margin-top: 1000px; /* adjust this to taste */
+    margin-top: 50px; /* adjust this to taste */
     transform: scale(var(--scale));
     transform-origin: center top; /* allows margin to work */
     height: 2408px;
