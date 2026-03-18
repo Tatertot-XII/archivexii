@@ -10,17 +10,24 @@
     margin: 0;
     padding: 0;
     background: #000;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    overflow: hidden;
     font-family: 'Inter', sans-serif;
   }
 
+  /* This wrapper scales the phone */
   .phone-wrapper {
     transform: scale(var(--scale));
-    transform-origin: top center;
+    transform-origin: center center;
+    height: 2408px;
+    width: 1080px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .a23-frame {
@@ -34,11 +41,12 @@
     box-shadow: 0 0 40px rgba(0,0,0,0.4);
   }
 
+  /* TEXT DOES NOT SCALE TWICE ANYMORE */
   .clock {
     position: absolute;
     top: 260px;
     left: 60px;
-    font-size: calc(180px * var(--scale));
+    font-size: 180px;
     font-weight: 100;
     color: white;
   }
@@ -47,7 +55,7 @@
     position: absolute;
     top: 500px;
     left: 65px;
-    font-size: calc(42px * var(--scale));
+    font-size: 42px;
     font-weight: 300;
     color: white;
   }
@@ -57,7 +65,7 @@
     bottom: 180px;
     left: 50%;
     transform: translateX(-50%);
-    font-size: calc(36px * var(--scale));
+    font-size: 36px;
     font-weight: 400;
     color: white;
     opacity: 0.8;
@@ -69,8 +77,10 @@
     const phoneHeight = 2408;
     const screenHeight = window.innerHeight;
     const scale = screenHeight / phoneHeight;
+
     document.documentElement.style.setProperty('--scale', scale);
   }
+
   window.onload = scalePhone;
   window.onresize = scalePhone;
 </script>
