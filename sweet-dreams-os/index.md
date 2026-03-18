@@ -18,6 +18,22 @@
     font-family: 'Inter', sans-serif;
   }
 
+  /* TOP-LEFT TITLE */
+  .header-title {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+    z-index: 9999;
+  }
+
+  /* HIDE DOCTYPE TEXT */
+  .hide-doctype {
+    display: none;
+  }
+
   /* PHONE FRAME */
   .phone {
     width: min(390px, 90vw);
@@ -34,7 +50,7 @@
   /* CLOCK + DATE BLOCK */
   .clock-container {
     position: absolute;
-    top: 24%; /* moved up to match Samsung A23 */
+    top: 24%; /* Samsung A23 placement */
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -67,6 +83,9 @@
 
 </head>
 <body>
+
+<div class="header-title">archivexii</div>
+<p class="hide-doctype"><!DOCTYPE html></p>
 
 <div class="phone">
   <div class="clock-container">
