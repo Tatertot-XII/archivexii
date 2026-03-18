@@ -15,13 +15,15 @@
     overflow: hidden;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* <-- THIS lets us push the phone down */
     font-family: 'Inter', sans-serif;
   }
 
+  /* Move the whole phone down */
   .phone-wrapper {
+    margin-top: 120px; /* <-- MOVE ENTIRE DEVICE DOWN */
     transform: scale(var(--scale));
-    transform-origin: center center;
+    transform-origin: top center;
     height: 2408px;
     width: 1080px;
   }
@@ -37,9 +39,10 @@
     box-shadow: 0 0 40px rgba(0,0,0,0.4);
   }
 
+  /* Text scales AND moves correctly */
   .clock {
     position: absolute;
-    top: calc(260px * var(--scale));
+    top: calc(360px * var(--scale)); /* moved down */
     left: calc(60px * var(--scale));
     font-size: calc(180px * var(--scale));
     font-weight: 100;
@@ -48,7 +51,7 @@
 
   .date {
     position: absolute;
-    top: calc(500px * var(--scale));
+    top: calc(620px * var(--scale)); /* moved down */
     left: calc(65px * var(--scale));
     font-size: calc(42px * var(--scale));
     font-weight: 300;
