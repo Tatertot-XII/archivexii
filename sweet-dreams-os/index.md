@@ -13,7 +13,7 @@
     width: 100vw;
 
     /* PERFECTLY CENTERED WALLPAPER */
-    background-image: url('andrbackdropviacopilot.jpeg'); /* adjust path if needed */
+  background-image: url('andrbackdropviacopilot.jpeg');
     background-size: cover;
     background-position: center center;
 
