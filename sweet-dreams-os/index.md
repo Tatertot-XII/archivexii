@@ -13,18 +13,19 @@
     width: 100vw;
     display: flex;
     justify-content: center;
-    align-items: center; /* centers the phone perfectly */
-    background: #000; /* outside background */
+    align-items: center;
+    background: #000;
     font-family: 'Inter', sans-serif;
   }
 
   /* PHONE FRAME */
   .phone {
-    width: 390px; /* iPhone / Samsung width */
-    height: 844px; /* tall phone aspect ratio */
-    border-radius: 40px; /* rounded top + bottom */
+    width: min(390px, 90vw);
+    height: calc(min(390px, 90vw) * 2.16);
+    border-radius: 40px;
     overflow: hidden;
     position: relative;
+
     background-image: url('andrbackdropviacopilot.jpeg');
     background-size: cover;
     background-position: center center;
@@ -33,7 +34,7 @@
   /* CLOCK + DATE BLOCK */
   .clock-container {
     position: absolute;
-    top: 38%;
+    top: 24%; /* moved up to match Samsung A23 */
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
