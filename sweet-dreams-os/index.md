@@ -1,99 +1,58 @@
-{% raw %}
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500&display=swap" rel="stylesheet">
-
 <style>
-  :root {
-    --scale: 1;
-  }
-
   body {
     margin: 0;
     padding: 0;
-    background: #000;
     height: 100vh;
     width: 100vw;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    font-family: 'Inter', sans-serif;
-  }
 
-  /* PHONE WRAPPER — NOW ACTUALLY MOVES */
-  .phone-wrapper {
-    margin-top: 200px; /* adjust this to taste */
-    transform: scale(var(--scale));
-    transform-origin: center top; /* allows margin to work */
-    height: 2408px;
-    width: 1080px;
-  }
-
-  .a23-frame {
-    width: 1080px;
-    height: 2408px;
-    background: url('./andrbackdropviacopilot.jpeg') no-repeat center center;
+    /* PERFECTLY CENTERED WALLPAPER */
+    background-image: url('sweet-dreams-os/andrbackdropviacopilot.jpeg');
     background-size: cover;
-    border-radius: 40px;
+    background-position: center center;
+
+    font-family: 'Inter', sans-serif;
+    color: white;
     overflow: hidden;
     position: relative;
-    box-shadow: 0 0 40px rgba(0,0,0,0.4);
   }
 
-  /* CLOCK — TRUE CENTER */
-  .clock {
+  /* CLOCK + DATE BLOCK */
+  .clock-container {
     position: absolute;
-    top: 48%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: calc(180px * var(--scale));
-    font-weight: 100;
-    color: white;
-  }
-
-  /* DATE — under clock */
-  .date {
-    position: absolute;
-    top: 56%;
+    top: 38%; /* moves clock higher for One UI spacing */
     left: 50%;
     transform: translateX(-50%);
-    font-size: calc(42px * var(--scale));
-    font-weight: 300;
-    color: white;
+    text-align: center;
   }
 
-  /* SWIPE — lower-middle */
+  .clock {
+    font-size: 72px;
+    font-weight: 600;
+    letter-spacing: -2px;
+  }
+
+  .date {
+    margin-top: 12px; /* spacing between time + date */
+    font-size: 22px;
+    opacity: 0.85;
+  }
+
+  /* SWIPE TEXT */
   .swipe {
     position: absolute;
-    top: 75%;
+    bottom: 55px; /* moves it lower */
     left: 50%;
     transform: translateX(-50%);
-    font-size: calc(36px * var(--scale));
-    font-weight: 400;
-    color: white;
+    font-size: 18px;
     opacity: 0.8;
   }
 </style>
 
-<script>
-  function scalePhone() {
-    const phoneHeight = 2408;
-    const screenHeight = window.innerHeight;
-
-    /* THE REAL FIX — scale to 90% of screen height */
-    const scale = (screenHeight * 0.9) / phoneHeight;
-
-    document.documentElement.style.setProperty('--scale', scale);
-  }
-
-  window.onload = scalePhone;
-  window.onresize = scalePhone;
-</script>
-
-<div class="phone-wrapper">
-  <div class="a23-frame">
-    <div class="clock">12:45</div>
-    <div class="date">Tue, March 19</div>
-    <div class="swipe">Swipe up to unlock</div>
-  </div>
+<!-- CLOCK + DATE -->
+<div class="clock-container">
+  <div class="clock">12:45</div>
+  <div class="date">Tue, March 19</div>
 </div>
-{% endraw %}
+
+<!-- SWIPE TEXT -->
+<div class="swipe">Swipe up to unlock</div>
