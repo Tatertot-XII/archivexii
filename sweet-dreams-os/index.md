@@ -18,6 +18,11 @@
     font-family: 'Inter', sans-serif;
   }
 
+  /* HIDE GITHUB BLUE LINK */
+  .page-header {
+    display: none;
+  }
+
   /* TOP-LEFT TITLE */
   .header-title {
     position: absolute;
