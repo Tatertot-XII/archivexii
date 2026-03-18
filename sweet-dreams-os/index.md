@@ -19,11 +19,11 @@
     font-family: 'Inter', sans-serif;
   }
 
-  /* LOWER THE WHOLE PHONE */
+  /* THIS IS THE FIX */
   .phone-wrapper {
-    margin-top: 220px; /* was 60px → then 140px → now LOWERED properly */
+    margin-top: 200px; /* lower the whole phone */
     transform: scale(var(--scale));
-    transform-origin: top center;
+    transform-origin: center center; /* <--- THE REAL FIX */
     height: 2408px;
     width: 1080px;
   }
@@ -39,7 +39,6 @@
     box-shadow: 0 0 40px rgba(0,0,0,0.4);
   }
 
-  /* CLOCK — TRUE CENTER */
   .clock {
     position: absolute;
     top: 48%;
@@ -50,7 +49,6 @@
     color: white;
   }
 
-  /* DATE — under clock */
   .date {
     position: absolute;
     top: 56%;
@@ -61,7 +59,6 @@
     color: white;
   }
 
-  /* SWIPE — lower-middle */
   .swipe {
     position: absolute;
     top: 75%;
